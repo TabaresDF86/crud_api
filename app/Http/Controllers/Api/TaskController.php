@@ -20,6 +20,9 @@ class TaskController extends Controller
         $task->user_id = $user_id;
         $task->name_task = $request->name_task;
         $task->description = $request->description;
+        $task->date_create = $request->date_create;
+        $task->date_end = $request->date_end;
+        $task->tasK_condition = $request->task_condition;
    
         $task->save();
 
@@ -49,6 +52,9 @@ class TaskController extends Controller
 
             $task->name_task = isset($request->task_name) ? $request->name_task : $task->name_task;
             $task->description = isset($request->description) ? $request->description : $task->description;
+            $task->date_create = isset($request->date_create) ? $request->date_create : $task->date_create;
+            $task->date_end = isset($request->date_end) ? $request->date_end : $task->date_end;
+            $task->task_condition = isset($request->task_condition) ? $request->task_condition : $task->task_condition;
 
             $task->save();
 

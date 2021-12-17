@@ -15,7 +15,10 @@ class task extends Model
     protected $fillable = [
         'user_id',
         'name_task',
-        'description'
+        'description',
+        'date_create',
+        'date_end',
+        'task_condition'
     ];
 
     public $timestamps = false;
